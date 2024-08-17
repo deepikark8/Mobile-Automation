@@ -1,0 +1,17 @@
+package Tests;
+
+import org.testng.annotations.BeforeTest;
+
+public class BaseClass {
+	
+	@BeforeTest
+	public void setup() {
+		
+	}
+	
+	@AfterTest
+	public void teardown() {
+		
+	}
+
+}

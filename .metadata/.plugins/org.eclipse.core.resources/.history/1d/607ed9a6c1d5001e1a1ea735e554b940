@@ -1,0 +1,9 @@
+package Tests;
+
+public class Tests extends BaseClass{
+
+	driver.get("https://www.google.com");
+	driver.findElement(By.name("q")).sendKeys("Automation");
+	driver.findElement(By.name("q")).sendKeys(Keys.Enter);
+	
+}

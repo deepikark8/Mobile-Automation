@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-05-30T00:21:54 PDT" name="Suite" finished-at="2024-05-30T00:25:03 PDT" duration-ms="188244">
+    <groups>
+    </groups>
+    <test started-at="2024-05-30T00:21:54 PDT" name="Test" finished-at="2024-05-30T00:25:03 PDT" duration-ms="188244">
+      <class name="Test.FormsTest">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Test.FormsTest@31c88ec8]" started-at="2024-05-30T00:24:01 PDT" name="beforeMethod" finished-at="2024-05-30T00:24:05 PDT" duration-ms="3908" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="forms()[pri:0, instance:Test.FormsTest@31c88ec8]" started-at="2024-05-30T00:24:05 PDT" name="forms" finished-at="2024-05-30T00:24:13 PDT" duration-ms="7129" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- forms -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Test.FormsTest@31c88ec8]" started-at="2024-05-30T00:24:13 PDT" name="tearDown" finished-at="2024-05-30T00:24:13 PDT" duration-ms="439" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Test.FormsTest -->
+      <class name="Test.SwipeTest">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Test.SwipeTest@1cbbffcd]" started-at="2024-05-30T00:24:13 PDT" name="beforeMethod" finished-at="2024-05-30T00:24:17 PDT" duration-ms="3844" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="swipe()[pri:0, instance:Test.SwipeTest@1cbbffcd]" started-at="2024-05-30T00:24:17 PDT" name="swipe" finished-at="2024-05-30T00:24:31 PDT" duration-ms="14423" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- swipe -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Test.SwipeTest@1cbbffcd]" started-at="2024-05-30T00:24:31 PDT" name="tearDown" finished-at="2024-05-30T00:24:32 PDT" duration-ms="515" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Test.SwipeTest -->
+      <class name="Test.DragDropTest">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Test.DragDropTest@27ce24aa]" started-at="2024-05-30T00:24:32 PDT" name="beforeMethod" finished-at="2024-05-30T00:24:36 PDT" duration-ms="3874" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="dragDrop()[pri:0, instance:Test.DragDropTest@27ce24aa]" started-at="2024-05-30T00:24:36 PDT" name="dragDrop" finished-at="2024-05-30T00:25:01 PDT" duration-ms="25679" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dragDrop -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Test.DragDropTest@27ce24aa]" started-at="2024-05-30T00:25:01 PDT" name="tearDown" finished-at="2024-05-30T00:25:03 PDT" duration-ms="1290" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Test.DragDropTest -->
+      <class name="Test.HomeTest">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Test.HomeTest@6e4784bc]" started-at="2024-05-30T00:21:54 PDT" name="beforeMethod" finished-at="2024-05-30T00:22:00 PDT" duration-ms="5526" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="home()[pri:0, instance:Test.HomeTest@6e4784bc]" started-at="2024-05-30T00:22:00 PDT" name="home" finished-at="2024-05-30T00:22:01 PDT" duration-ms="610" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- home -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Test.HomeTest@6e4784bc]" started-at="2024-05-30T00:22:01 PDT" name="tearDown" finished-at="2024-05-30T00:22:01 PDT" duration-ms="549" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Test.HomeTest -->
+      <class name="Test.LoginTest">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Test.LoginTest@3daa422a]" started-at="2024-05-30T00:23:37 PDT" name="beforeMethod" finished-at="2024-05-30T00:23:42 PDT" duration-ms="4774" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="login()[pri:0, instance:Test.LoginTest@3daa422a]" started-at="2024-05-30T00:23:42 PDT" name="login" finished-at="2024-05-30T00:24:01 PDT" duration-ms="19404" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Test.LoginTest@3daa422a]" started-at="2024-05-30T00:24:01 PDT" name="tearDown" finished-at="2024-05-30T00:24:01 PDT" duration-ms="539" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Test.LoginTest -->
+      <class name="Test.WebViewTest">
+        <test-method is-config="true" signature="before()[pri:0, instance:Test.WebViewTest@72f926e6]" started-at="2024-05-30T00:22:01 PDT" name="before" finished-at="2024-05-30T00:22:05 PDT" duration-ms="3890" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method signature="clickWebView()[pri:0, instance:Test.WebViewTest@72f926e6]" started-at="2024-05-30T00:22:05 PDT" name="clickWebView" finished-at="2024-05-30T00:22:39 PDT" duration-ms="34057" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickWebView -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Test.WebViewTest@72f926e6]" started-at="2024-05-30T00:22:39 PDT" name="tearDown" finished-at="2024-05-30T00:22:41 PDT" duration-ms="2234" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="before()[pri:0, instance:Test.WebViewTest@72f926e6]" started-at="2024-05-30T00:22:41 PDT" name="before" finished-at="2024-05-30T00:22:46 PDT" duration-ms="4781" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method signature="viewOnGithub()[pri:0, instance:Test.WebViewTest@72f926e6]" started-at="2024-05-30T00:22:46 PDT" name="viewOnGithub" finished-at="2024-05-30T00:23:36 PDT" duration-ms="49652" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- viewOnGithub -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Test.WebViewTest@72f926e6]" started-at="2024-05-30T00:23:36 PDT" name="tearDown" finished-at="2024-05-30T00:23:37 PDT" duration-ms="808" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Test.WebViewTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

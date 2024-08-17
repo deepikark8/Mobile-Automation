@@ -1,0 +1,11 @@
+package Tests;
+
+public class Tests extends BaseClass{
+
+	public void testOne() {
+	driver.get("https://www.google.com");
+	driver.findElement(By.name("q")).sendKeys("Automation");
+	driver.findElement(By.name("q")).sendKeys(Keys.ENTER);
+	}
+	
+}

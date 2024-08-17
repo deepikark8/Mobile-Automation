@@ -1,0 +1,170 @@
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.time.Duration;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import io.appium.java_client.AppiumBy;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.options.UiAutomator2Options;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.PointerInput;
+import org.openqa.selenium.interactions.Sequence;
+import org.openqa.selenium.remote.RemoteWebElement;
+
+import com.google.common.collect.ImmutableMap;
+
+public class Wdio_DragAndDrop {
+	static AndroidDriver driver;
+	public static void main(String[] args) throws MalformedURLException, InterruptedException {
+		
+		launchapp();
+		dragDrop();
+		driver.quit();
+	}
+	
+	public static void launchapp() throws MalformedURLException, InterruptedException {
+		
+		String apkPath = System.getProperty("user.dir")+"/BuildFiles/android-wdio-native.apk";
+		
+		UiAutomator2Options options = new UiAutomator2Options();
+		options
+			.setDeviceName("Pixel 3 XL")
+			.setPlatformName("Android")
+			.setPlatformVersion("9.0")//setCapability("platformVersion", "9.0")
+			.setAppActivity(".MainActivity")
+			.setAppPackage("com.wdiodemoapp")
+			.setApp(apkPath)
+			.setNoReset(false);//true : will not install app if its already present 
+		
+		//create object for AndroidDriver / IOSDriver
+	    driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"),options);
+//		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(13));
+	    Thread.sleep(2000);
+	    
+	    driver.findElement(By.xpath("//android.view.View[@content-desc=\"Drag\"]")).click();
+	    
+	}
+	
+	public static void dragDrop() throws InterruptedException {
+		
+		
+		Thread.sleep(5000);
+		RemoteWebElement source1 = (RemoteWebElement) driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"drag-l2\"]/android.widget.ImageView"));//AppiumBy.accessibilityId("dragMe")
+		RemoteWebElement destination1 = (RemoteWebElement) driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"drop-l2\"]/android.view.ViewGroup"));//AppiumBy.accessibilityId("dropzone")
+	
+		RemoteWebElement source2 = (RemoteWebElement) driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"drag-r3\"]/android.widget.ImageView"));//AppiumBy.accessibilityId("dragMe")
+		RemoteWebElement destination2 = (RemoteWebElement) driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"drop-r3\"]/android.view.ViewGroup"));//AppiumBy.accessibilityId("dropzone")
+	
+		RemoteWebElement source3 = (RemoteWebElement) driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"drag-r1\"]/android.widget.ImageView"));//AppiumBy.accessibilityId("dragMe")
+		RemoteWebElement destination3 = (RemoteWebElement) driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"drop-r1\"]/android.view.ViewGroup"));//AppiumBy.accessibilityId("dropzone")
+	
+		RemoteWebElement source4 = (RemoteWebElement) driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"drag-c1\"]/android.widget.ImageView"));//AppiumBy.accessibilityId("dragMe")
+		RemoteWebElement destination4 = (RemoteWebElement) driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"drop-c1\"]/android.view.ViewGroup"));//AppiumBy.accessibilityId("dropzone")
+	
+		RemoteWebElement source5 = (RemoteWebElement) driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"drag-c3\"]/android.widget.ImageView"));//AppiumBy.accessibilityId("dragMe")
+		RemoteWebElement destination5 = (RemoteWebElement) driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"drop-c3\"]/android.view.ViewGroup"));//AppiumBy.accessibilityId("dropzone")
+	
+		RemoteWebElement source6 = (RemoteWebElement) driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"drag-r2\"]/android.widget.ImageView"));//AppiumBy.accessibilityId("dragMe")
+		RemoteWebElement destination6 = (RemoteWebElement) driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"drop-r2\"]/android.view.ViewGroup"));//AppiumBy.accessibilityId("dropzone")
+	
+		RemoteWebElement source7 = (RemoteWebElement) driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"drag-c2\"]/android.widget.ImageView"));//AppiumBy.accessibilityId("dragMe")
+		RemoteWebElement destination7 = (RemoteWebElement) driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"drop-c2\"]/android.view.ViewGroup"));//AppiumBy.accessibilityId("dropzone")
+		
+		RemoteWebElement source8 = (RemoteWebElement) driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"drag-l1\"]/android.widget.ImageView"));//AppiumBy.accessibilityId("dragMe")
+		RemoteWebElement destination8 = (RemoteWebElement) driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"drop-l1\"]/android.view.ViewGroup"));//AppiumBy.accessibilityId("dropzone")
+		
+		RemoteWebElement source9 = (RemoteWebElement) driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"drag-l3\"]/android.widget.ImageView"));//AppiumBy.accessibilityId("dragMe")
+		RemoteWebElement destination9 = (RemoteWebElement) driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"drop-l3\"]/android.view.ViewGroup"));//AppiumBy.accessibilityId("dropzone")
+		
+		
+		
+		// Perform the first drag-and-drop action
+        dragAndDrop(driver, source1, destination1);
+        dragAndDrop(driver, source2, destination2);
+        dragAndDrop(driver, source3, destination3);
+        dragAndDrop(driver, source4, destination4);
+        dragAndDrop(driver, source5, destination5);
+        dragAndDrop(driver, source6, destination6);
+        dragAndDrop(driver, source7, destination7);
+        dragAndDrop(driver, source8, destination8);
+        dragAndDrop(driver, source9, destination9);
+        
+        
+        
+        
+		
+//		Map<String, Object> args = new HashMap<>();
+//		args.put(source1.getId(), destination1.getId());
+//		args.put(source2.getId(), destination2.getId());
+//		driver.executeScript("gesture: dragAndDrop", args);
+
+        
+	}
+
+	public static void dragAndDrop(AndroidDriver driver, RemoteWebElement source, RemoteWebElement target) {
+        Map<String, Object> args = new HashMap<>();
+        args.put("sourceId", source.getId());
+        args.put("destinationId", target.getId());
+      //  args.put("duration", 2.0); // Duration in seconds
+
+        driver.executeScript("gesture: dragAndDrop", args);
+    }
+	
+	public static void dragAndDrop_Pointer_Seq() {
+		
+		RemoteWebElement source1 = (RemoteWebElement) driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"drag-l2\"]/android.widget.ImageView"));//AppiumBy.accessibilityId("dragMe")
+		RemoteWebElement destination1 = (RemoteWebElement) driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"drop-l2\"]/android.view.ViewGroup"));//AppiumBy.accessibilityId("dropzone")
+	
+		RemoteWebElement source2 = (RemoteWebElement) driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"drag-r3\"]/android.widget.ImageView"));//AppiumBy.accessibilityId("dragMe")
+		RemoteWebElement destination2 = (RemoteWebElement) driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"drop-r3\"]/android.view.ViewGroup"));//AppiumBy.accessibilityId("dropzone")
+	
+		RemoteWebElement source3 = (RemoteWebElement) driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"drag-r1\"]/android.widget.ImageView"));//AppiumBy.accessibilityId("dragMe")
+		RemoteWebElement destination3 = (RemoteWebElement) driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"drop-r1\"]/android.view.ViewGroup"));//AppiumBy.accessibilityId("dropzone")
+	
+		RemoteWebElement source4 = (RemoteWebElement) driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"drag-c1\"]/android.widget.ImageView"));//AppiumBy.accessibilityId("dragMe")
+		RemoteWebElement destination4 = (RemoteWebElement) driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"drop-c1\"]/android.view.ViewGroup"));//AppiumBy.accessibilityId("dropzone")
+	
+		RemoteWebElement source5 = (RemoteWebElement) driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"drag-c3\"]/android.widget.ImageView"));//AppiumBy.accessibilityId("dragMe")
+		RemoteWebElement destination5 = (RemoteWebElement) driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"drop-c3\"]/android.view.ViewGroup"));//AppiumBy.accessibilityId("dropzone")
+	
+		RemoteWebElement source6 = (RemoteWebElement) driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"drag-r2\"]/android.widget.ImageView"));//AppiumBy.accessibilityId("dragMe")
+		RemoteWebElement destination6 = (RemoteWebElement) driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"drop-r2\"]/android.view.ViewGroup"));//AppiumBy.accessibilityId("dropzone")
+	
+		RemoteWebElement source7 = (RemoteWebElement) driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"drag-c2\"]/android.widget.ImageView"));//AppiumBy.accessibilityId("dragMe")
+		RemoteWebElement destination7 = (RemoteWebElement) driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"drop-c2\"]/android.view.ViewGroup"));//AppiumBy.accessibilityId("dropzone")
+		
+		RemoteWebElement source8 = (RemoteWebElement) driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"drag-l1\"]/android.widget.ImageView"));//AppiumBy.accessibilityId("dragMe")
+		RemoteWebElement destination8 = (RemoteWebElement) driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"drop-l1\"]/android.view.ViewGroup"));//AppiumBy.accessibilityId("dropzone")
+		
+		RemoteWebElement source9 = (RemoteWebElement) driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"drag-l3\"]/android.widget.ImageView"));//AppiumBy.accessibilityId("dragMe")
+		RemoteWebElement destination9 = (RemoteWebElement) driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"drop-l3\"]/android.view.ViewGroup"));//AppiumBy.accessibilityId("dropzone")
+		
+		// Perform the first drag-and-drop action
+        dragAndDrop(driver, source1, destination1);
+
+        // Perform the second drag-and-drop action
+        dragAndDrop(driver, source2, destination2);
+	}
+	
+	private static void dragAndDrop_Pointer(AndroidDriver driver, WebElement source, WebElement target) {
+        PointerInput finger = new PointerInput(PointerInput.Kind.TOUCH, "finger");
+        Sequence dragAndDrop = new Sequence(finger, 0);
+
+        // Start at the center of the source element
+        dragAndDrop.addAction(finger.createPointerMove(Duration.ZERO, PointerInput.Origin.viewport(), source.getLocation().getX() + source.getSize().getWidth() / 2, source.getLocation().getY() + source.getSize().getHeight() / 2));
+        dragAndDrop.addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()));
+        
+        // Move to the center of the target element
+        dragAndDrop.addAction(finger.createPointerMove(Duration.ofSeconds(1), PointerInput.Origin.viewport(), target.getLocation().getX() + target.getSize().getWidth() / 2, target.getLocation().getY() + target.getSize().getHeight() / 2));
+        dragAndDrop.addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
+
+        driver.perform(Collections.singletonList(dragAndDrop));
+    }
+	
+	
+}

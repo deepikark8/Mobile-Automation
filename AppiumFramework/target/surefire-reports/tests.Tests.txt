@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: tests.Tests
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 6.618 sec <<< FAILURE!
+testOne(tests.Tests)  Time elapsed: 0.003 sec  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "io.appium.java_client.AppiumDriver.get(String)" because "this.driver" is null
+	at tests.Tests.testOne(Tests.java:11)
+

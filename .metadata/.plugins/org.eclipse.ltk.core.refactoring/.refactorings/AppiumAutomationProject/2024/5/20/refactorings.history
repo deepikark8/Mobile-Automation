@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;AppiumAutomationProject/src/test/java/com/appium/test/DropDown.java&apos; to &apos;DropDown_logs.java&apos;" description="Rename resource &apos;DropDown.java&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/test/java/com/appium/test/DropDown.java" name="DropDown_logs.java" stamp="1715983931755" updateReferences="true"/>
+</session>

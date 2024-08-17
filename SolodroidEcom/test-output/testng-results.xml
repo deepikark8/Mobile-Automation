@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="3" total="4" passed="0" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-02-28T13:25:59 PST" name="Default suite" finished-at="2024-02-28T13:26:08 PST" duration-ms="9346">
+    <groups>
+    </groups>
+    <test started-at="2024-02-28T13:25:59 PST" name="Default test" finished-at="2024-02-28T13:26:08 PST" duration-ms="9346">
+      <class name="com.appium.test.HomeTest">
+        <test-method is-config="true" signature="launchApp()[pri:0, instance:com.appium.test.HomeTest@7205765b]" started-at="2024-02-28T13:25:59 PST" name="launchApp" finished-at="2024-02-28T13:26:06 PST" duration-ms="6962" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApp -->
+        <test-method signature="addItem()[pri:0, instance:com.appium.test.HomeTest@7205765b]" started-at="2024-02-28T13:26:06 PST" name="addItem" finished-at="2024-02-28T13:26:08 PST" duration-ms="2284" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchSessionException">
+            <message>
+              <![CDATA[The session identified by fe03c6ee-64bb-4e8e-b332-94b0885b327b is not known
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '14.1.1', java.version: '17.0.5'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [342a29ae-383f-42e1-a3fd-c0c5fce92192, findElement {using=xpath, value=//android.widget.TextView[@resource-id="com.solodroid.solomerce:id/product_name" and @text="Samsung Galaxy S10 - Black"]}]
+Capabilities {appium:appActivity: com.solodroid.solomerce.act..., appium:appPackage: com.solodroid.solomerce, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.solodroid.solomerce.act..., appPackage: com.solodroid.solomerce, automationName: UIAutomator2, deviceName: Pixel 3 XL, platformName: ANDROID, platformVersion: 9.0}, appium:deviceApiLevel: 28, appium:deviceManufacturer: unknown, appium:deviceModel: Android SDK built for arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 560, appium:deviceScreenSize: 1440x2960, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 3.5, appium:platformVersion: 9, appium:statBarHeight: 172, appium:takesScreenshot: true, appium:viewportRect: {height: 2449, left: 0, top: 172, width: 1440}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 342a29ae-383f-42e1-a3fd-c0c5fce92192]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchSessionException: The session identified by fe03c6ee-64bb-4e8e-b332-94b0885b327b is not known
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '14.1.1', java.version: '17.0.5'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [342a29ae-383f-42e1-a3fd-c0c5fce92192, findElement {using=xpath, value=//android.widget.TextView[@resource-id="com.solodroid.solomerce:id/product_name" and @text="Samsung Galaxy S10 - Black"]}]
+Capabilities {appium:appActivity: com.solodroid.solomerce.act..., appium:appPackage: com.solodroid.solomerce, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {appActivity: com.solodroid.solomerce.act..., appPackage: com.solodroid.solomerce, automationName: UIAutomator2, deviceName: Pixel 3 XL, platformName: ANDROID, platformVersion: 9.0}, appium:deviceApiLevel: 28, appium:deviceManufacturer: unknown, appium:deviceModel: Android SDK built for arm64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 560, appium:deviceScreenSize: 1440x2960, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 3.5, appium:platformVersion: 9, appium:statBarHeight: 172, appium:takesScreenshot: true, appium:viewportRect: {height: 2449, left: 0, top: 172, width: 1440}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 342a29ae-383f-42e1-a3fd-c0c5fce92192
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+at com.appium.test.HomeTest.addItem(HomeTest.java:35)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addItem -->
+      </class> <!-- com.appium.test.HomeTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

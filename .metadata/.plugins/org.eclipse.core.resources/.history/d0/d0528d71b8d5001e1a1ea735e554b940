@@ -1,0 +1,33 @@
+package Tests;
+
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+
+import io.appium.java_client.remote.MobileCapabilityType;
+
+public class BaseClass {
+	
+	@BeforeTest
+	public void setup() {
+		
+		DesiredCapabilities caps = new DesiredCapabilities();
+		
+		//Using MobileCapabilityType gives you all the options to choose from - Enum.
+		caps.setCapability(CapabilityType.PLATFORM_NAME, "iOS");	
+		caps.setCapability(CapabilityType.PLATFORM_VERSION, "17.0");//16.7.2
+		caps.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone 15 Pro");//8
+		caps.setCapability(MobileCapabilityType.UDID, "6F36D0CF-4DF4-410D-8F4C-70EF4E99000D");//  6F36D0CF-4DF4-410D-8F4C-70EF4E99000D
+		caps.setCapability(MobileCapabilityType.APP, "com.deepika.apple-samplecode.UICatalog");//caps.setCapability("bundleID", "com.deepika.apple-samplecode.UICatalog"); 
+		caps.setCapability(MobileCapabilityType.AUTOMATION_NAME, "XCUITest");
+		
+		
+	}
+	
+	@AfterTest
+	public void teardown() {
+		
+	}
+
+}

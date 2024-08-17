@@ -1,0 +1,10 @@
+username : oauth-deepikark8-98e05
+access-key : 2813ab37-f925-4cbd-93b2-6bc85052a835
+
+ios.simulator.wdio.native.app.v1.0.8.zip
+
+ 
+appium --use-plugins=gestures --address 127.0.0.1 --port 4723 --base-path /wd/hub --allow-cors --allow-insecure chromedriver_autodownload
+	  
+appium --use-plugins=gestures --address 127.0.0.1 --port 4723 --base-path /wd/hub --allow-cors
+	 

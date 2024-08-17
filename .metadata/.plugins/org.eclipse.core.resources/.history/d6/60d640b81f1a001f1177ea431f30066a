@@ -1,0 +1,82 @@
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import io.appium.java_client.AppiumBy;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.options.UiAutomator2Options;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.remote.RemoteWebElement;
+
+import com.google.common.collect.ImmutableMap;
+
+public class Wdio_DragAndDrop {
+	static AndroidDriver driver;
+	public static void main(String[] args) throws MalformedURLException {
+		
+		launchapp();
+		dragDrop();
+	}
+	
+	public static void launchapp() throws MalformedURLException {
+		
+		String apkPath = System.getProperty("user.dir")+"/BuildFiles/android-wdio-native.apk";
+		
+		UiAutomator2Options options = new UiAutomator2Options();
+		options
+			.setDeviceName("Pixel 3 XL")
+			.setPlatformName("Android")
+			.setPlatformVersion("9.0")//setCapability("platformVersion", "9.0")
+			.setAppActivity(".MainActivity")
+			.setAppPackage("com.wdiodemoapp")
+			.setApp(apkPath)
+			.setNoReset(true);//true : will not install app if its already present 
+		
+		//create object for AndroidDriver / IOSDriver
+	    driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"),options);
+		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(13));
+	}
+	
+	public static void dragDrop() {
+		
+		/*
+		 * RemoteWebElement source = (RemoteWebElement) wait.until(elementToBeClickable(AppiumBy.accessibilityId("dragMe")));
+			RemoteWebElement destination = (RemoteWebElement) wait.until(elementToBeClickable(AppiumBy.accessibilityId("dropzone")));
+
+			driver.executeScript("gesture: dragAndDrop", Map.of("sourceId", source.getId(), "destinationId", destination.getId()));
+		 * 
+		 * 
+		 */
+		
+		RemoteWebElement source1 = (RemoteWebElement) driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"drag-l2\"]/android.widget.ImageView\n"
+				+ ""));//AppiumBy.accessibilityId("dragMe")
+		RemoteWebElement destination1 = (RemoteWebElement) driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"drop-l2\"]/android.view.ViewGroup"));//AppiumBy.accessibilityId("dropzone")
+	
+		RemoteWebElement source2 = (RemoteWebElement) driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"drag-r3\"]/android.widget.ImageView"));//AppiumBy.accessibilityId("dragMe")
+		RemoteWebElement destination2 = (RemoteWebElement) driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"drop-r3\"]/android.view.ViewGroup"));//AppiumBy.accessibilityId("dropzone")
+	
+		
+		 // List of drag-and-drop actions
+        List<Map<String, Object>> actions = List.of(
+            ImmutableMap.of("source", source1.getId(), "target", destination1.getId()),
+            ImmutableMap.of("source", source2.getId(), "target", destination2.getId())
+        );
+
+
+        //driver.executeScript("mobile: swipeGesture", params);
+		driver.executeScript("gesture: dragAndDrop", Map.of("sourceId", source.getId(), "destinationId", destination.getId()));
+				
+//		// Perform each drag-and-drop action
+//        for (Map<String, Object> action : actions) {
+//            MobileElement source = (MobileElement) action.get("source");
+//            MobileElement target = (MobileElement) action.get("target");
+//            dragAndDrop(driver, source, target);
+//        }
+//		
+		
+	}
+
+}

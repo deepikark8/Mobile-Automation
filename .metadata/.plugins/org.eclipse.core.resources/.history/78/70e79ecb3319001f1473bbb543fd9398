@@ -1,0 +1,209 @@
+
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.time.Duration;
+import java.util.Arrays;
+
+import org.openqa.selenium.By;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.PointerInput;
+import org.openqa.selenium.interactions.Sequence;
+import org.openqa.selenium.remote.RemoteWebElement;
+import org.testng.Assert;
+
+import com.google.common.collect.ImmutableMap;
+
+import io.appium.java_client.AppiumBy;
+import io.appium.java_client.TouchAction;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.options.UiAutomator2Options;
+import io.appium.java_client.touch.WaitOptions;
+import io.appium.java_client.touch.offset.PointOption;
+
+
+//https://www.youtube.com/watch?v=4Gds5fq0YdY&t=637s
+
+/*
+ * 
+ * adb shell getprop ro.build.version.release ---> to get version
+ * 
+ * adb shell dumpsys window windows | grep mFocusedApp ---> to get App package and App activity
+ * 
+ * 
+ */
+
+public class Wdio {
+	static AndroidDriver driver;
+	
+	public static void main(String[] args) throws MalformedURLException, InterruptedException {
+		launchapp();
+		homepage();
+		// Example swipe: Adjust the percentages based on your screen size
+        swipeUsingW3CActions(driver, 0.5, 0.9, 0.1);
+		
+		//swipe();
+		//swipe_gesture(driver, 100, 500, 900, 500);
+		
+//		 // Example swipe: Adjust the coordinates based on your screen size
+//        int height = driver.manage().window().getSize().height;
+//        int width = driver.manage().window().getSize().width;
+//		// Perform a swipe left action
+//        swipe_gesture(driver, (int) (width * 0.20), height / 2, (int) (width * 0.8), height / 2);
+
+		//driver.quit();
+	}
+
+	public static void launchapp() throws MalformedURLException {
+	
+		String apkPath = System.getProperty("user.dir")+"/BuildFiles/android-wdio-native.apk";
+		
+		UiAutomator2Options options = new UiAutomator2Options();
+		options
+			.setDeviceName("Pixel 3 XL")
+			.setPlatformName("Android")
+			.setPlatformVersion("9.0")//setCapability("platformVersion", "9.0")
+			.setAppActivity(".MainActivity")
+			.setAppPackage("com.wdiodemoapp")
+			.setApp(apkPath)
+			.setNoReset(false);//true : will not install app if its already present 
+		
+		//ce2d954 u0 com.wdiodemoapp
+		//com.wdiodemoapp.MainActivity
+		
+		//create object for AndroidDriver / IOSDriver
+	    driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"),options);
+		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(13));
+	}
+	
+	public static void homepage() throws InterruptedException {
+		String strText = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Demo app for the appium-boilerplate\"]")).getText();
+		System.out.println("Title : "+strText);
+		
+		//driver.findElement(By.xpath("//android.widget.TextView[@text=\"Webview\"]")).click();
+		driver.findElement(By.xpath("//android.view.View[@content-desc=\"Swipe\"]")).click();
+		//Thread.sleep(10000);
+		
+	}
+	
+	
+	public static void swipeMe() throws InterruptedException {
+		//driver.findElement(AppiumBy.accessibilityId("Swipe")).click();
+		driver.findElement(By.xpath("//android.view.View[@content-desc=\"Swipe\"]")).click();
+		Thread.sleep(4000);
+//		scroll("RIGHT",0.5);
+//		Thread.sleep(2000);
+//		scroll("RIGHT",0.5);
+//		Thread.sleep(2000);
+//		scroll("LEFT",0.5);
+//		Thread.sleep(2000);
+//		scroll("DOWN",0.8);
+//		Thread.sleep(2000);
+//		scroll("UP",0.8);
+		
+	}
+	
+	
+	public static void swipe_gesture(AndroidDriver driver, int startX, int startY, int endX, int endY) {
+		PointerInput finger = new PointerInput(PointerInput.Kind.TOUCH, "finger");
+        Sequence swipe = new Sequence(finger, 1)
+            .addAction(finger.createPointerMove(Duration.ZERO, PointerInput.Origin.viewport(), startX, startY))
+            .addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()))
+            .addAction(finger.createPointerMove(Duration.ofMillis(1000), PointerInput.Origin.viewport(), endX, endY))
+            .addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
+
+        driver.perform(Arrays.asList(swipe));
+	}
+	
+	public static void swipeUsingW3CActions(AndroidDriver driver, double anchorPercentage, double startPercentage, double endPercentage) {
+		// Get the size of the screen
+        Dimension size = driver.manage().window().getSize();
+        int anchor = (int) (size.height * anchorPercentage);
+        int startPoint = (int) (size.width * startPercentage);
+        int endPoint = (int) (size.width * endPercentage);
+
+        // Create a pointer input source
+        PointerInput finger = new PointerInput(PointerInput.Kind.TOUCH, "finger");
+
+        // Create a swipe sequence
+        Sequence swipe = new Sequence(finger, 1)
+                .addAction(finger.createPointerMove(Duration.ZERO, PointerInput.Origin.viewport(), startPoint, anchor))
+                .addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()))
+                .addAction(finger.createPointerMove(Duration.ofMillis(1000), PointerInput.Origin.viewport(), endPoint, anchor))
+                .addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
+
+        // Perform the swipe action
+        driver.perform(Arrays.asList(swipe));
+    }
+	
+	
+	private WaitOptions waitOptions(Object ofMillis) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	private Object ofMillis(int i) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	private PointOption point(int startPoint, int anchor) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public static void swipe() throws InterruptedException {
+		
+		/*
+		 * 
+		 * RemoteWebElement carousel = (RemoteWebElement) wait.until(presenceOfElementLocated(AppiumBy.accessibilityId("Carousel")));
+
+driver.executeScript("gesture: swipe", Map.of("elementId", carousel.getId(), "percentage", 50, "direction", "left"));
+		 * 
+		 */
+		Thread.sleep(2000);
+		
+		RemoteWebElement carousel = (RemoteWebElement) driver.findElement(AppiumBy.accessibilityId("Carousel")); 
+		driver.executeScript("gesture: swipe", ImmutableMap.of(
+ 				"elementId", carousel.getId(),
+ 			    "direction", "left",
+ 			    "percentage", 50
+ 			));	
+		
+		
+		
+		
+//		driver.executeScript("gesture: swipe", ImmutableMap.of(
+// 				"elementId", carousel.getId(),
+// 			    "direction", "right",
+// 			    "percentage", 50
+// 			));	
+//		
+		
+		
+		
+		
+		
+//		WebElement firstImage= driver.findElement(By.xpath("//android.view.ViewGroup[@content-desc=\"Carousel\"]/android.view.ViewGroup/android.view.ViewGroup"));
+//		
+//				//Before perform the swipe
+//				String firstTimeValue=firstImage.getAttribute("focusable");
+//				Assert.assertEquals("false",firstTimeValue);
+//				
+//				//perform swipe action
+//				 driver.executeScript("mobile: swipeGesture", ImmutableMap.of(
+//		 				"elementId", ((RemoteWebElement) firstImage).getId(),
+//		 			    "direction", "left",
+//		 			    "percentage", 50
+//		 			));	
+//				 
+//				
+//				//After perform the swipe
+//				String secondTimeValue=firstImage.getAttribute("focusable");
+//				Assert.assertEquals("false",secondTimeValue);
+				
+	}
+	
+	
+	
+}

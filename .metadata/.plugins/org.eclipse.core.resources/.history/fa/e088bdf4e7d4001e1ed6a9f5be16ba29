@@ -1,0 +1,48 @@
+package Page;
+
+import org.openqa.selenium.By;
+
+import io.appium.java_client.MobileBy;
+import io.appium.java_client.MobileElement;
+import io.appium.java_client.pagefactory.iOSXCUITFindBy;
+
+public class MainPage {
+
+	
+	//@FindBy(xpath="//div[@id='nav-tools']//span[contains(text(),'Account & Lists')]")
+	//WebElement clickAccountsLists;
+	
+//	@AndroidFindBy(id = "username_edit_text")
+//	@iOSXCUITFindBy(accessibility = "login.textfield.email")
+//	MobileElement usernameField;
+	
+	@iOSXCUITFindBy(accessibility="Action Sheets")
+	MobileElement actionSheets;
+	
+	@iOSXCUITFindBy(accessibility="Okay / Cancel")
+	MobileElement okBtn;
+
+	
+	@iOSXCUITFindBy(accessibility="//XCUIElementTypeOther[@name=\\\"Horizontal scroll bar, 1 page\\\"])[2]")
+	MobileElement scrollAction;
+	
+	
+	public void clickActionSheetAction() {
+		actionSheets.click();	
+	}
+	
+	public void clickOkBtn() {
+		okBtn.click();
+	}
+	
+	public void clickScrollAction() {
+		scrollAction.click();
+	}
+	
+//	driver.findElement(MobileBy.AccessibilityId("Action Sheets")).click();
+//	driver.findElement(MobileBy.AccessibilityId("Okay / Cancel")).click();
+//	driver.findElement(By.xpath("(//XCUIElementTypeOther[@name=\"Horizontal scroll bar, 1 page\"])[2]")).click();
+	
+}
+
+

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Saucelab_Demo_App/src/test/java/iOS&apos; to &apos;OS&apos;" description="Rename resource &apos;iOS&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/test/java/iOS" name="OS" stamp="1718429050029" updateReferences="true"/>
+</session>
