@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 4 elements to &apos;Wdio_SauceLab/src/main/java&apos;&#x0A;- Original project: &apos;Android_IOS_Wdio_Native&apos;&#x0A;- Destination element: &apos;Wdio_SauceLab/src/main/java&apos;&#x0A;- Original elements:&#x0A;     Base&#x0A;     listerners&#x0A;     log&#x0A;     utilities" description="Copy folders" destination="=Wdio_SauceLab/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/" element1="src/main/java/Base" element2="src/main/java/listerners" element3="src/main/java/log" element4="src/main/java/utilities" files="0" flags="589830" folders="4" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1718409230833" units="0" version="1.0"/>
+</session>

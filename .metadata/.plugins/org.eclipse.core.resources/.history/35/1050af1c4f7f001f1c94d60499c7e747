@@ -1,0 +1,22 @@
+package com.training.runner;
+
+import org.junit.runner.RunWith;
+
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
+
+@RunWith(Cucumber.class)
+@CucumberOptions(features="/Users/rahade/workspaceMobileAutomation/CucumberFramework2/features/Login/Login.feature",
+glue={"com.training.steps"},
+
+@CucumberOptions(
+	    features = "@target/failed_scenarios.txt",
+	    glue = "com.training.steps",
+	        "pretty",
+	        "html:target/rerun-reports"
+	    }
+	)
+
+public class FailedTestRunner {
+
+}

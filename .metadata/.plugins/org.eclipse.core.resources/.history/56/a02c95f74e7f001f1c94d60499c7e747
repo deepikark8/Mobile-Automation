@@ -1,0 +1,15 @@
+package com.training.runner;
+
+
+@CucumberOptions(
+	    features = "@target/failed_scenarios.txt",
+	    glue = "com.example.stepdefinitions",
+	    plugin = {
+	        "pretty",
+	        "html:target/rerun-reports"
+	    }
+	)
+
+public class FailedTestRunner {
+
+}

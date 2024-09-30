@@ -1,0 +1,19 @@
+package com.training.runner;
+
+import org.junit.runner.RunWith;
+
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
+
+@RunWith(Cucumber.class)
+@CucumberOptions(features="/Users/rahade/workspaceMobileAutomation/CucumberFramework2/features/Login/Login.feature",
+glue={"com.training.steps"},
+dryRun = true
+//"dry run" is a way to check the feature files and step definitions for syntax errors or any missing step definitions without actually executing the test steps. It allows you to verify that everything is set up correctly before running the tests fully.
+
+	
+		)
+
+public class TestRunner {
+
+}

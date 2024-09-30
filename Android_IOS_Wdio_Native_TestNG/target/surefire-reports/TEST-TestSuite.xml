@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="189.589" tests="7" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="15"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/rahade/workspaceMobileAutomation/Android_Wdio_Native/target/test-classes:/Users/rahade/workspaceMobileAutomation/Android_Wdio_Native/target/classes:/Users/rahade/.m2/repository/io/appium/java-client/9.2.2/java-client-9.2.2.jar:/Users/rahade/.m2/repository/org/seleniumhq/selenium/selenium-api/4.21.0/selenium-api-4.21.0.jar:/Users/rahade/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.21.0/selenium-remote-driver-4.21.0.jar:/Users/rahade/.m2/repository/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar:/Users/rahade/.m2/repository/com/google/guava/guava/33.2.0-jre/guava-33.2.0-jre.jar:/Users/rahade/.m2/repository/com/google/guava/failureaccess/1.0.2/failureaccess-1.0.2.jar:/Users/rahade/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/rahade/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/Users/rahade/.m2/repository/org/checkerframework/checker-qual/3.42.0/checker-qual-3.42.0.jar:/Users/rahade/.m2/repository/com/google/errorprone/error_prone_annotations/2.26.1/error_prone_annotations-2.26.1.jar:/Users/rahade/.m2/repository/com/google/j2objc/j2objc-annotations/3.0.0/j2objc-annotations-3.0.0.jar:/Users/rahade/.m2/repository/io/opentelemetry/semconv/opentelemetry-semconv/1.25.0-alpha/opentelemetry-semconv-1.25.0-alpha.jar:/Users/rahade/.m2/repository/io/opentelemetry/opentelemetry-api/1.38.0/opentelemetry-api-1.38.0.jar:/Users/rahade/.m2/repository/io/opentelemetry/opentelemetry-context/1.38.0/opentelemetry-context-1.38.0.jar:/Users/rahade/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.38.0/opentelemetry-exporter-logging-1.38.0.jar:/Users/rahade/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.38.0/opentelemetry-sdk-common-1.38.0.jar:/Users/rahade/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.38.0/opentelemetry-sdk-extension-autoconfigure-spi-1.38.0.jar:/Users/rahade/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.38.0/opentelemetry-sdk-extension-autoconfigure-1.38.0.jar:/Users/rahade/.m2/repository/io/opentelemetry/opentelemetry-api-incubator/1.38.0-alpha/opentelemetry-api-incubator-1.38.0-alpha.jar:/Users/rahade/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.38.0/opentelemetry-sdk-trace-1.38.0.jar:/Users/rahade/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.38.0/opentelemetry-sdk-1.38.0.jar:/Users/rahade/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.38.0/opentelemetry-sdk-metrics-1.38.0.jar:/Users/rahade/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.38.0/opentelemetry-sdk-logs-1.38.0.jar:/Users/rahade/.m2/repository/net/bytebuddy/byte-buddy/1.14.15/byte-buddy-1.14.15.jar:/Users/rahade/.m2/repository/org/seleniumhq/selenium/selenium-http/4.21.0/selenium-http-4.21.0.jar:/Users/rahade/.m2/repository/dev/failsafe/failsafe/3.3.2/failsafe-3.3.2.jar:/Users/rahade/.m2/repository/org/seleniumhq/selenium/selenium-json/4.21.0/selenium-json-4.21.0.jar:/Users/rahade/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.21.0/selenium-manager-4.21.0.jar:/Users/rahade/.m2/repository/org/seleniumhq/selenium/selenium-os/4.21.0/selenium-os-4.21.0.jar:/Users/rahade/.m2/repository/org/apache/commons/commons-exec/1.4.0/commons-exec-1.4.0.jar:/Users/rahade/.m2/repository/org/seleniumhq/selenium/selenium-support/4.21.0/selenium-support-4.21.0.jar:/Users/rahade/.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar:/Users/rahade/.m2/repository/org/slf4j/slf4j-api/2.0.12/slf4j-api-2.0.12.jar:/Users/rahade/.m2/repository/org/testng/testng/7.7.1/testng-7.7.1.jar:/Users/rahade/.m2/repository/com/beust/jcommander/1.82/jcommander-1.82.jar:/Users/rahade/.m2/repository/org/webjars/jquery/3.6.1/jquery-3.6.1.jar:/Users/rahade/.m2/repository/org/slf4j/slf4j-simple/2.0.12/slf4j-simple-2.0.12.jar:/Users/rahade/.m2/repository/com/aventstack/extentreports/3.0.0/extentreports-3.0.0.jar:/Users/rahade/.m2/repository/org/freemarker/freemarker/2.3.23/freemarker-2.3.23.jar:/Users/rahade/.m2/repository/org/mongodb/mongodb-driver/3.3.0/mongodb-driver-3.3.0.jar:/Users/rahade/.m2/repository/org/mongodb/bson/3.3.0/bson-3.3.0.jar:/Users/rahade/.m2/repository/org/mongodb/mongodb-driver-core/3.3.0/mongodb-driver-core-3.3.0.jar:/Users/rahade/.m2/repository/org/apache/httpcomponents/httpclient/4.5.2/httpclient-4.5.2.jar:/Users/rahade/.m2/repository/org/apache/httpcomponents/httpcore/4.4.4/httpcore-4.4.4.jar:/Users/rahade/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/rahade/.m2/repository/commons-codec/commons-codec/1.9/commons-codec-1.9.jar:/Users/rahade/.m2/repository/org/apache/httpcomponents/httpmime/4.5.2/httpmime-4.5.2.jar:/Users/rahade/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar:/Users/rahade/.m2/repository/commons-io/commons-io/2.6/commons-io-2.6.jar:"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="America/Los_Angeles"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="15"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-15.0.2.jdk/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/rahade/workspaceMobileAutomation/Android_Wdio_Native/target/surefire/surefirebooter-20240530002153624_3.jar /Users/rahade/workspaceMobileAutomation/Android_Wdio_Native/target/surefire 2024-05-30T00-21-52_995-jvmRun1 surefire-20240530002153624_1tmp surefire_0-20240530002153624_2tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/Users/rahade/workspaceMobileAutomation/Android_Wdio_Native/target/test-classes:/Users/rahade/workspaceMobileAutomation/Android_Wdio_Native/target/classes:/Users/rahade/.m2/repository/io/appium/java-client/9.2.2/java-client-9.2.2.jar:/Users/rahade/.m2/repository/org/seleniumhq/selenium/selenium-api/4.21.0/selenium-api-4.21.0.jar:/Users/rahade/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.21.0/selenium-remote-driver-4.21.0.jar:/Users/rahade/.m2/repository/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar:/Users/rahade/.m2/repository/com/google/guava/guava/33.2.0-jre/guava-33.2.0-jre.jar:/Users/rahade/.m2/repository/com/google/guava/failureaccess/1.0.2/failureaccess-1.0.2.jar:/Users/rahade/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/rahade/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/Users/rahade/.m2/repository/org/checkerframework/checker-qual/3.42.0/checker-qual-3.42.0.jar:/Users/rahade/.m2/repository/com/google/errorprone/error_prone_annotations/2.26.1/error_prone_annotations-2.26.1.jar:/Users/rahade/.m2/repository/com/google/j2objc/j2objc-annotations/3.0.0/j2objc-annotations-3.0.0.jar:/Users/rahade/.m2/repository/io/opentelemetry/semconv/opentelemetry-semconv/1.25.0-alpha/opentelemetry-semconv-1.25.0-alpha.jar:/Users/rahade/.m2/repository/io/opentelemetry/opentelemetry-api/1.38.0/opentelemetry-api-1.38.0.jar:/Users/rahade/.m2/repository/io/opentelemetry/opentelemetry-context/1.38.0/opentelemetry-context-1.38.0.jar:/Users/rahade/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.38.0/opentelemetry-exporter-logging-1.38.0.jar:/Users/rahade/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.38.0/opentelemetry-sdk-common-1.38.0.jar:/Users/rahade/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.38.0/opentelemetry-sdk-extension-autoconfigure-spi-1.38.0.jar:/Users/rahade/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.38.0/opentelemetry-sdk-extension-autoconfigure-1.38.0.jar:/Users/rahade/.m2/repository/io/opentelemetry/opentelemetry-api-incubator/1.38.0-alpha/opentelemetry-api-incubator-1.38.0-alpha.jar:/Users/rahade/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.38.0/opentelemetry-sdk-trace-1.38.0.jar:/Users/rahade/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.38.0/opentelemetry-sdk-1.38.0.jar:/Users/rahade/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.38.0/opentelemetry-sdk-metrics-1.38.0.jar:/Users/rahade/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.38.0/opentelemetry-sdk-logs-1.38.0.jar:/Users/rahade/.m2/repository/net/bytebuddy/byte-buddy/1.14.15/byte-buddy-1.14.15.jar:/Users/rahade/.m2/repository/org/seleniumhq/selenium/selenium-http/4.21.0/selenium-http-4.21.0.jar:/Users/rahade/.m2/repository/dev/failsafe/failsafe/3.3.2/failsafe-3.3.2.jar:/Users/rahade/.m2/repository/org/seleniumhq/selenium/selenium-json/4.21.0/selenium-json-4.21.0.jar:/Users/rahade/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.21.0/selenium-manager-4.21.0.jar:/Users/rahade/.m2/repository/org/seleniumhq/selenium/selenium-os/4.21.0/selenium-os-4.21.0.jar:/Users/rahade/.m2/repository/org/apache/commons/commons-exec/1.4.0/commons-exec-1.4.0.jar:/Users/rahade/.m2/repository/org/seleniumhq/selenium/selenium-support/4.21.0/selenium-support-4.21.0.jar:/Users/rahade/.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar:/Users/rahade/.m2/repository/org/slf4j/slf4j-api/2.0.12/slf4j-api-2.0.12.jar:/Users/rahade/.m2/repository/org/testng/testng/7.7.1/testng-7.7.1.jar:/Users/rahade/.m2/repository/com/beust/jcommander/1.82/jcommander-1.82.jar:/Users/rahade/.m2/repository/org/webjars/jquery/3.6.1/jquery-3.6.1.jar:/Users/rahade/.m2/repository/org/slf4j/slf4j-simple/2.0.12/slf4j-simple-2.0.12.jar:/Users/rahade/.m2/repository/com/aventstack/extentreports/3.0.0/extentreports-3.0.0.jar:/Users/rahade/.m2/repository/org/freemarker/freemarker/2.3.23/freemarker-2.3.23.jar:/Users/rahade/.m2/repository/org/mongodb/mongodb-driver/3.3.0/mongodb-driver-3.3.0.jar:/Users/rahade/.m2/repository/org/mongodb/bson/3.3.0/bson-3.3.0.jar:/Users/rahade/.m2/repository/org/mongodb/mongodb-driver-core/3.3.0/mongodb-driver-core-3.3.0.jar:/Users/rahade/.m2/repository/org/apache/httpcomponents/httpclient/4.5.2/httpclient-4.5.2.jar:/Users/rahade/.m2/repository/org/apache/httpcomponents/httpcore/4.4.4/httpcore-4.4.4.jar:/Users/rahade/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/rahade/.m2/repository/commons-codec/commons-codec/1.9/commons-codec-1.9.jar:/Users/rahade/.m2/repository/org/apache/httpcomponents/httpmime/4.5.2/httpmime-4.5.2.jar:/Users/rahade/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar:/Users/rahade/.m2/repository/commons-io/commons-io/2.6/commons-io-2.6.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/rahade"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2021-01-19"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk-15.0.2.jdk/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="style.color" value="always"/>
+    <property name="basedir" value="/Users/rahade/workspaceMobileAutomation/Android_Wdio_Native"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="surefire.real.class.path" value="/Users/rahade/workspaceMobileAutomation/Android_Wdio_Native/target/surefire/surefirebooter-20240530002153624_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="15.0.2+7-27"/>
+    <property name="user.name" value="rahade"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="10.16"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="/Users/rahade/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="/var/folders/9m/0j83878557zc4mwpxjbf4vdc0000gn/T/"/>
+    <property name="java.version" value="15.0.2"/>
+    <property name="user.dir" value="/Users/rahade/workspaceMobileAutomation/Android_Wdio_Native"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.library.path" value="/Users/rahade/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="15.0.2+7-27"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.class.version" value="59.0"/>
+  </properties>
+  <testcase name="home" classname="Test.HomeTest" time="0.642">
+    <system-out><![CDATA[*** Test Suite Test started ***
+launch app
+*** Running test method home...
+Directory already exists: /Users/rahade/workspaceMobileAutomation/Android_Wdio_Native/ExtentReport
+2024-05-30 00:22:00 INFO  Log:31 - Title of the Page is displayed
+Title : Demo app for the appium-boilerplate
+2024-05-30 00:22:01 INFO  Log:31 - Home page
+*** Executed home test successfully...
+]]></system-out>
+  </testcase>
+  <testcase name="clickWebView" classname="Test.WebViewTest" time="34.137">
+    <system-out><![CDATA[Screenshot captured.
+Destination file path: /Users/rahade/workspaceMobileAutomation/Android_Wdio_Native/Screenshot/2024-05-30-00-22-01.jpeg
+Screenshot saved successfully at: /Users/rahade/workspaceMobileAutomation/Android_Wdio_Native/Screenshot/2024-05-30-00-22-01.jpeg
+launch app
+*** Running test method clickWebView...
+2024-05-30 00:22:05 INFO  Log:31 - WebView Page
+swipeWebView
+getStarted
+swipeUp
+swipeDown
+clickHome
+*** Executed clickWebView test successfully...
+]]></system-out>
+  </testcase>
+  <testcase name="viewOnGithub" classname="Test.WebViewTest" time="49.682">
+    <system-out><![CDATA[Screenshot captured.
+Destination file path: /Users/rahade/workspaceMobileAutomation/Android_Wdio_Native/Screenshot/2024-05-30-00-22-41.jpeg
+Screenshot saved successfully at: /Users/rahade/workspaceMobileAutomation/Android_Wdio_Native/Screenshot/2024-05-30-00-22-41.jpeg
+launch app
+*** Running test method viewOnGithub...
+swipeWebView
+*** Executed viewOnGithub test successfully...
+]]></system-out>
+  </testcase>
+  <testcase name="login" classname="Test.LoginTest" time="19.409">
+    <system-out><![CDATA[Screenshot captured.
+Destination file path: /Users/rahade/workspaceMobileAutomation/Android_Wdio_Native/Screenshot/2024-05-30-00-23-36.jpeg
+Screenshot saved successfully at: /Users/rahade/workspaceMobileAutomation/Android_Wdio_Native/Screenshot/2024-05-30-00-23-36.jpeg
+launch app
+*** Running test method login...
+2024-05-30 00:23:42 INFO  Log:31 - Login Page
+You are logged in!
+Btn clicked
+Msg
+You successfully signed up!
+*** Executed login test successfully...
+]]></system-out>
+  </testcase>
+  <testcase name="forms" classname="Test.FormsTest" time="7.132">
+    <system-out><![CDATA[Screenshot captured.
+Destination file path: /Users/rahade/workspaceMobileAutomation/Android_Wdio_Native/Screenshot/2024-05-30-00-24-01.jpeg
+Screenshot saved successfully at: /Users/rahade/workspaceMobileAutomation/Android_Wdio_Native/Screenshot/2024-05-30-00-24-01.jpeg
+launch app
+*** Running test method forms...
+2024-05-30 00:24:05 INFO  Log:31 - Forms page
+Test
+*** Executed forms test successfully...
+]]></system-out>
+  </testcase>
+  <testcase name="swipe" classname="Test.SwipeTest" time="14.433">
+    <system-out><![CDATA[Screenshot captured.
+Destination file path: /Users/rahade/workspaceMobileAutomation/Android_Wdio_Native/Screenshot/2024-05-30-00-24-13.jpeg
+Screenshot saved successfully at: /Users/rahade/workspaceMobileAutomation/Android_Wdio_Native/Screenshot/2024-05-30-00-24-13.jpeg
+launch app
+*** Running test method swipe...
+2024-05-30 00:24:17 INFO  Log:31 - Swipe page
+Reached the end of the carousel.
+*** Executed swipe test successfully...
+]]></system-out>
+  </testcase>
+  <testcase name="dragDrop" classname="Test.DragDropTest" time="25.701">
+    <system-out><![CDATA[Screenshot captured.
+Destination file path: /Users/rahade/workspaceMobileAutomation/Android_Wdio_Native/Screenshot/2024-05-30-00-24-32.jpeg
+Screenshot saved successfully at: /Users/rahade/workspaceMobileAutomation/Android_Wdio_Native/Screenshot/2024-05-30-00-24-32.jpeg
+launch app
+*** Running test method dragDrop...
+2024-05-30 00:24:36 INFO  Log:31 - Drag and Drop Page
+Sucessfully drag and dropped
+*** Executed dragDrop test successfully...
+]]></system-out>
+  </testcase>
+</testsuite>

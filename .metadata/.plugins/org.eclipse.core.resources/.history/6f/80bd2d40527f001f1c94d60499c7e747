@@ -1,0 +1,25 @@
+package com.training.runner;
+
+import org.junit.runner.RunWith;
+
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
+
+
+@RunWith(Cucumber.class)
+@CucumberOptions(features="/Users/rahade/workspaceMobileAutomation/CucumberFramework2/features/Login/Login.feature",
+glue={"com.training.steps"},
+dryRun = true,
+plugin={"pretty","html:target/cucumber-reports/cucumber.html",
+		"json:target/cucumber-reports/cucumber.json",
+		"rerun:target/failed_scenarios.txt" //The line "rerun:target/failed_scenarios.txt" specifies that the rerun information will be saved in the failed_scenarios.txt file in the target directory.
+		
+		}//,
+//tags = "@smoke"
+	
+		)
+
+public class Runner {
+
+}
+
